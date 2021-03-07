@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: bisque;
+  height: 100vh;
+  .wide {
+    width: 660px;
+  }
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 50px;
+    margin: 130px 0;
+    text-transform: uppercase;
+  }
+  a {
+    width: 530px;
+    margin: 50px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: red;
+    text-shadow: 1px 1px black;
+  }
+}
+
+.game-page, .main-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+}
+button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;  
+  margin: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.field {
+  display: inline-flex;
+  width: 440px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.flip-container {
+  perspective: 1000;
+}
+  
+.flip-container.clicked .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.flipper {
+  transition: 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  background: red;
+  z-index: 2;
+}
+.back {
+  transform: rotateY(180deg);
+  background: black;
+}
+.card {
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
+}
+.gameplay__level {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.popup-wrapper {
+  background: rgba(64,64,64, .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.popup {
+  padding:4px 16px 16px 16px;
+  position: fixed;
+  top: 25%;
+  width: 400px;
+  background: bisque;
+  box-shadow: 0 0 17px darkgrey;
+  border-radius: 10px;
+  z-index: 3;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    padding: 15px;
+    font-size: 30px;
+  }
+  &__content, &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__close-icon {
+    cursor: pointer;
+    height: 20px;
+    font-size: 20px;
+  }
+  .close_modal {
+    background: red;
+    padding: 8px;
+    color: #fff;
+  }
+}
