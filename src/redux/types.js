@@ -7,4 +7,4 @@ export const RESET_CLICKED = 'RESET_CLICKED';
 export const INCREMENT_MATCHES = 'INCREMENT_MATCHES';
 export const RESET_MATCHES = 'RESET_MATCHES';
 export const IS_ALERT_VISIBLE = 'IS_ALERT_VISIBLE';
-export const REDIRECT = 'REDIRECT'
+export const REDIRECT = 'REDIRECT';

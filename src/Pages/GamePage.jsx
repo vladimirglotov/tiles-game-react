@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Field from '../components/Field'
+import Field from '../components/Field';
 
 export const GamePage = (props) => {
+
   return (
     <div className="game-page">
       <Field />
@@ -15,4 +16,4 @@ export const GamePage = (props) => {
       </NavLink>
     </div>
   )
-}
+};

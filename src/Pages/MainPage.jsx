@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const MainPage = () => {
+
   return (
     <div className="main-page">
       <h1>Tiles Game</h1>
@@ -15,4 +16,4 @@ export const MainPage = () => {
 
     </div>
   )
-}
+};

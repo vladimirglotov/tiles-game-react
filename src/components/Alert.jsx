@@ -1,13 +1,15 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 export const Alert = (props) => {
-  let history = useHistory()
+  let history = useHistory();
+
   const handleClickAlert = () => {
-    props.onClick()
+    props.onClick();
+
     if (props.matches > 10) {
-      history.push('/')
+      history.push('/');
     }
   }
   
@@ -33,4 +35,4 @@ export const Alert = (props) => {
       </div>
     </div>
   )
-}
+};

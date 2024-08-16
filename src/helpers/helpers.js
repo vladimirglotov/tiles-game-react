@@ -3,12 +3,13 @@ import { addToClicked, incrementClicksCounter} from '../redux/actions';
 export  const resetGame = () => {
   let deletedCards = document.querySelectorAll('.flipper');
   let emptyCards = document.querySelectorAll("section");
+
   for (let i = 0; i < emptyCards.length; i++) {
     deletedCards[i].parentNode.classList.remove('no-click');
     emptyCards[i].remove();
     deletedCards[i].style.display ? deletedCards[i].style.display = 'block' : void 0;   
   }
-}
+};
 
 export const levelUp = () => {
   let deletedCards = document.querySelectorAll('.flipper');

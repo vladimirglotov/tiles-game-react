@@ -13,5 +13,5 @@ export const Navbar = (linkTo) => {
       </NavLink>
     </div>
   )
-}
+};
   
